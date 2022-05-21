@@ -8,6 +8,7 @@ export const Header = () => {
       <Link to="/" className="logo--odkaz">
         LeXie
       </Link>
+      <div>
       <Link to="/projekt" className="odkaz">
         O projektu
       </Link>
@@ -19,6 +20,7 @@ export const Header = () => {
       <Link to="/medailonP" className="odkaz">
         Pavla Bukovská
       </Link>
+      </div>
     </>
   );
 };

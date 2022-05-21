@@ -13,18 +13,19 @@ const App = () => (
   <>
     <h1>LeXie</h1>
     <img className="slon--img" src={foto} alt="slon" />
-    <Link to="/projekt" className="odkaz">
+    
+    <Link to="/projekt" className="homepage">
       O projektu
     </Link>
 
-    <Link to="/medailonK" className="odkaz">
+    <Link to="/medailonK" className="homepage">
       Klára Chmelařová
     </Link>
 
-    <Link to="/medailonP" className="odkaz">
+    <Link to="/medailonP" className="homepage">
       Pavla Bukovská
     </Link>
-    <Outlet />
+  
   </>
 );
 

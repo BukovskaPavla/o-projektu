@@ -33,7 +33,7 @@ p {
 header {
   padding: 10px;
 }
-.odkaz {
+.homepage {
   background-color: #f4b7b7;
   width: 300px;
   height: 70px;
@@ -42,13 +42,33 @@ header {
   border-radius: 10px;
   font-size: 22px;
   line-height: 3;
+  text-align: center;
 }
+
+.odkaz{
+  width: 300px;
+  height: 70px;
+  margin: 10px;
+  color: black;
+  border-radius: 10px;
+  font-size: 22px;
+  line-height: 3;
+  
+}
+
+
 .slon--img {
   width: 200px;
 }
 h1 {
   font-size: 500%;
 }
+
+.homepage{
+  display: flex;
+  
+}
+
 
 @media (min-width: 520px) {
   .medailonek {
