@@ -1,27 +1,11 @@
 import React from 'react';
+import { Header } from '../Header';
 import './style.css';
 
-const Medailon = () => {
+export const MedailonK = () => {
   return (
     <>
-      <header>
-        <div className="logo">
-          <a className="logo--odkaz" href="./index.html">
-            LeXie
-          </a>
-        </div>
-        <div className="my">
-          <a className="my--oProjektu" href="./projekt.html">
-            O projektu
-          </a>
-          <a className="my--Paja" href="./paja.html">
-            Pavla Bukovská
-          </a>
-          <a className="my--Klara" href="./klara.html">
-            Klára Chmelařová
-          </a>
-        </div>
-      </header>
+      <Header />
       <div className="medailonek">
         <img src="./img/Klara.png" alt="foto Klára" />
         <div className="popis">
@@ -55,5 +39,3 @@ const Medailon = () => {
     </>
   );
 };
-
-export default Medailon;

@@ -1,27 +1,11 @@
 import React from 'react';
+import { Header } from '../Header';
 import './style.css';
 
-const Projekt = () => {
+export const Projekt = () => {
   return (
     <>
-      <header>
-        <div className="logo">
-          <a className="logo--odkaz" href="./index.html">
-            LeXie
-          </a>
-        </div>
-        <div className="my">
-          <a className="my--oProjektu" href="./projekt.html">
-            O projektu
-          </a>
-          <a className="my--Paja" href="./paja.html">
-            Pavla Bukovská
-          </a>
-          <a className="my--Klara" href="./klara.html">
-            Klára Chmelařová
-          </a>
-        </div>
-      </header>
+      <Header />
       <div className="obsah">
         <h2>Popis webové aplikace:</h2>
         <p>
@@ -81,5 +65,3 @@ const Projekt = () => {
     </>
   );
 };
-
-export default Projekt;
