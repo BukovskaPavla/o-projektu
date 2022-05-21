@@ -1,13 +1,14 @@
 import React from 'react';
 import { Header } from '../Header';
 import './style.css';
+import foto from '../img/Klara.png';
 
 export const MedailonK = () => {
   return (
     <>
       <Header />
       <div className="medailonek">
-        <img src="img/Klara.png" alt="foto Klára" />
+        <img className="foto" src={foto} alt="foto Klára" />
         <div className="popis">
           <h2>Něco o mně:</h2>
           <p>
