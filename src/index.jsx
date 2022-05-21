@@ -11,7 +11,7 @@ import { Link, BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 const App = () => (
   <>
     <h1>LeXie</h1>
-    <img className="slon--img" src="Menu/img/slon.png" alt="slon" />
+    <img className="slon--img" src="img/slon.png" alt="slon" />
     <Link to="/projekt" className="odkaz">
       O projektu
     </Link>
