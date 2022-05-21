@@ -1,13 +1,14 @@
 import React from 'react';
 import { Header } from '../Header';
 import "./style.css"
+import foto from "../img/Paja.png"
 
 export const MedailonP = () => {
   return (
     <>
       <Header />
       <div className="medailonek">
-        <img src="./img/Paja.png" alt="foto Pája" />
+        <img className="foto" src={foto} alt="foto Pája" />
         <div className="popis">
           <h2>Něco o mně:</h2>
             <p>Vystudovala jsem Matematické metody v ekonomii na VŠE a Projektové řízení na ČZU. Žila jsem celý život v Praze, ale teď jsem se přestěhovala do Úval.</p>
