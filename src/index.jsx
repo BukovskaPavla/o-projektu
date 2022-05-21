@@ -5,13 +5,14 @@ import './style.css';
 import { Projekt } from './Projekt/index.jsx';
 import { MedailonK } from './MedailonK/index.jsx';
 import { MedailonP } from './MedailonP';
+import foto from './img/slon.png';
 
 import { Link, BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 
 const App = () => (
   <>
     <h1>LeXie</h1>
-    <img className="slon--img" src="img/slon.png" alt="slon" />
+    <img className="slon--img" src={foto} alt="slon" />
     <Link to="/projekt" className="odkaz">
       O projektu
     </Link>
