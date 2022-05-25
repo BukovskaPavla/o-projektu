@@ -5,6 +5,7 @@ import './style.css';
 import { Projekt } from './Projekt/index.jsx';
 import { MedailonK } from './MedailonK/index.jsx';
 import { MedailonP } from './MedailonP';
+import { Common } from './Common';
 import foto from './img/slon.png';
 
 import { Link, BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
@@ -32,10 +33,12 @@ const App = () => (
 createRoot(document.querySelector('#app')).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />{' '}
-      <Route path="projekt" element={<Projekt />} />
-      <Route path="medailonK" element={<MedailonK />} />
-      <Route path="medailonP" element={<MedailonP />} />
+      <Route path="/" element={<App />} />
+      <Route path="/" element={<Common />}>
+        <Route path="projekt" element={<Projekt />} />
+        <Route path="medailonK" element={<MedailonK />} />
+        <Route path="medailonP" element={<MedailonP />} />
+      </Route>
     </Routes>
   </BrowserRouter>,
 );

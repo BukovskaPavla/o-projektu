@@ -5,7 +5,6 @@ import './style.css';
 export const Projekt = () => {
   return (
     <>
-      <Header />
       <div className="obsah">
         <h2>Popis webové aplikace:</h2>
         <p>

@@ -6,7 +6,6 @@ import foto from '../img/Klara.png';
 export const MedailonK = () => {
   return (
     <>
-      <Header />
       <div className="medailonek">
         <img className="foto" src={foto} alt="foto Klára" />
         <div className="popis">

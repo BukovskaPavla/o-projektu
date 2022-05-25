@@ -6,7 +6,6 @@ import foto from "../img/Paja.png"
 export const MedailonP = () => {
   return (
     <>
-      <Header />
       <div className="medailonek">
         <img className="foto" src={foto} alt="foto Pája" />
         <div className="popis">
