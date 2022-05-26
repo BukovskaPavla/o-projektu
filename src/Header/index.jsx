@@ -13,11 +13,11 @@ export const Header = () => {
           O projektu
         </Link>
 
-        <Link to="/medailon" className="odkaz">
+        <Link to="/medailon+Klara" className="odkaz">
           Klára Chmelařová
         </Link>
 
-        <Link to="/medailon" className="odkaz">
+        <Link to="/medailon+Pavla" className="odkaz">
           Pavla Bukovská
         </Link>
       </div>
