@@ -39,6 +39,7 @@ createRoot(document.querySelector('#app')).render(
       <Route path="/" element={<App />} />
       <Route path="/" element={<Common />}>
         <Route path="projekt" element={<Projekt />} />
+
         <Route
           path="medailon"
           element={popis.map((e) => (
