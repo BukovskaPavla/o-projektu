@@ -6,18 +6,18 @@ export const Header = () => {
   return (
     <>
       <Link to="/" className="logo--odkaz">
-        LeXie
+        LeXije
       </Link>
       <div className="rozcestnik">
         <Link to="/projekt" className="odkaz">
           O projektu
         </Link>
 
-        <Link to="/medailon" className="odkaz">
+        <Link to="/medailon+Klara" className="odkaz">
           Klára Chmelařová
         </Link>
 
-        <Link to="/medailon" className="odkaz">
+        <Link to="/medailon+Pavla" className="odkaz">
           Pavla Bukovská
         </Link>
       </div>
