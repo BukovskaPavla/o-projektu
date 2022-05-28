@@ -4,12 +4,12 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 import { Projekt } from './Projekt/index.jsx';
 import { Medailon } from './Medailon/index.jsx';
-
 import { Common } from './Common';
 import foto1 from './img/slon.png';
+import fotoKlara from './img/Klara.png';
+import fotoPaja from './img/Paja.png';
 import { Link, BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
-// Tohle nevím jestli teda nemáme úplně smazat??? :-/
-// nebo přejmenovat ba Common :-D
+
 const App = () => (
   <>
     <h1>LeXije</h1>
@@ -19,15 +19,16 @@ const App = () => (
       O projektu
     </Link>
 
-    <Link id="klara" to="/medailon+Klara" className="homepage">
+    <Link id="klara" to="/medailon/Klara" className="homepage">
       Klára Chmelařová
     </Link>
 
-    <Link id="paja" to="/medailon+Pavla" className="homepage">
+    <Link id="paja" to="/medailon/Pavla" className="homepage">
       Pavla Bukovská
     </Link>
   </>
 );
+
 const popis = [
   {
     id: '1',
@@ -43,7 +44,7 @@ const popis = [
       'Myslím si, že sem kamarádská, někdy trochu trhlá a taky upovídaná (musím ale člověka nejdřív trochu poznat).',
     popis5:
       'Mám ráda asijskou kuchyni, sem tam filozofování o životě a vymýšlení nových nápadů.',
-    foto: '../img/Klara.png',
+    foto: fotoKlara,
   },
   {
     id: '2',
@@ -55,10 +56,10 @@ const popis = [
       'Pracovala jsem v Equa bank na pozici produktového analytika - půjčky a hypotéky.',
     popis3: 'Ráda chodím ven - kolo, lyže, procházky.',
     popis4:
-      'Jsem máma dvou malých kluků. Jsem introvert, ale extrovert občas převezme otěže..',
+      'Jsme máma dvou malých kluků. Jsem introvert, ale extrovert občas převezm otěže..',
     popis5:
       'Věnuji se taiči a to již dlouho. Moje první webovky, byly právě o taiči.',
-    foto: '../img/Paja.png',
+    foto: fotoPaja,
   },
 ];
 
@@ -68,36 +69,26 @@ createRoot(document.querySelector('#app')).render(
       <Route path="/" element={<App />} />
       <Route path="/" element={<Common />}>
         <Route path="projekt" element={<Projekt />} />
-        <Route
-          path="medailon+Klara"
-          element={
-            <Medailon
-              key={popis[0].id}
-              jmeno={popis[0].jmeno}
-              popis1={popis[0].popis1}
-              popis2={popis[0].popis2}
-              popis3={popis[0].popis3}
-              popis4={popis[0].popis4}
-              popis5={popis[0].popis5}
-              foto={popis[0].foto}
+
+        <Route path="medailon">
+          {popis.map((medailon) => (
+            <Route
+              path={medailon.jmenoCesta}
+              element={
+                <Medailon
+                  key={medailon.id}
+                  jmeno={medailon.jmeno}
+                  popis1={medailon.popis1}
+                  popis2={medailon.popis2}
+                  popis3={medailon.popis3}
+                  popis4={medailon.popis4}
+                  popis5={medailon.popis5}
+                  foto={medailon.foto}
+                />
+              }
             />
-          }
-        />
-        <Route
-          path="medailon+Pavla"
-          element={
-            <Medailon
-              key={popis[1].id}
-              jmeno={popis[1].jmeno}
-              popis1={popis[1].popis1}
-              popis2={popis[1].popis2}
-              popis3={popis[1].popis3}
-              popis4={popis[1].popis4}
-              popis5={popis[1].popis5}
-              foto={popis[1].foto}
-            />
-          }
-        />
+          ))}
+        </Route>
       </Route>
     </Routes>
   </BrowserRouter>,
