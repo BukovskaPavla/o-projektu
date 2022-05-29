@@ -34,31 +34,26 @@ const popis = [
     id: '1',
     jmenoCesta: 'Klara',
     jmeno: 'Klára Chmelařová',
-    popis1:
+    popis: [
       'Ahoj, mám vystudovanou VŠ v oboru Kondiční specialista (v překladu trenér). Sport mám ráda, ale v oboru pracovat nechci.. Jeden z důvodů, je časová náročnost. Dále jsem absolvovala několik kurzů jako třeba: sportovní masáže, výživa. Stihla jsem i erasmus v Norsku. Ve své práci chci něco vytvářet, vymýšlet a vidět výsledek. Také proto jsem si vybrala front-end.',
-    popis2:
       'V současné době pracuji jako asistent/ekonom ve webové redakci. A v blízké době chci změnit obor a věnovat se IT.',
-    popis3:
       'Ráda poznávám nová místa a chutě, čtu, peču, sportuji, jsem v přírodě a jezdím na koni.',
-    popis4:
       'Myslím si, že sem kamarádská, někdy trochu trhlá a taky upovídaná (musím ale člověka nejdřív trochu poznat).',
-    popis5:
-      'Mám ráda asijskou kuchyni, sem tam filozofování o životě a vymýšlení nových nápadů.',
+      'Mám ráda asijskou kuchyni, sem tam filozofování o životě a vymýšlení nových nápadů.'
+    ],
     foto: fotoKlara,
   },
   {
     id: '2',
     jmenoCesta: 'Pavla',
     jmeno: 'Pavla Bukovská',
-    popis1:
+    popis:[
       'Vystudovala jsem Matematické metody v ekonomii na VŠE a Projektové řízení na ČZU. Žila jsem celý život v Praze, ale teď jsem se přestěhovala do Úval.',
-    popis2:
       'Pracovala jsem v Equa bank na pozici produktového analytika - půjčky a hypotéky.',
-    popis3: 'Ráda chodím ven - kolo, lyže, procházky.',
-    popis4:
+      'Ráda chodím ven - kolo, lyže, procházky.',
       'Jsme máma dvou malých kluků. Jsem introvert, ale extrovert občas převezm otěže..',
-    popis5:
-      'Věnuji se taiči a to již dlouho. Moje první webovky, byly právě o taiči.',
+      'Věnuji se taiči a to již dlouho. Moje první webovky, byly právě o taiči.'
+    ],
     foto: fotoPaja,
   },
 ];
@@ -78,11 +73,7 @@ createRoot(document.querySelector('#app')).render(
                 <Medailon
                   key={medailon.id}
                   jmeno={medailon.jmeno}
-                  popis1={medailon.popis1}
-                  popis2={medailon.popis2}
-                  popis3={medailon.popis3}
-                  popis4={medailon.popis4}
-                  popis5={medailon.popis5}
+                  popis={medailon.popis}
                   foto={medailon.foto}
                 />
               }
